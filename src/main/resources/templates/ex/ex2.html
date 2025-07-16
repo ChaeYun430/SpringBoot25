@@ -1,0 +1,22 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head><meta charset="UTF-8">
+  <title>ex2</title></head>
+<body>
+
+<div th:text="${list}">리스트로 넘어온 데이터 확인용</div>
+<hr>
+<div th:text="${map}">map으로 넘어온 데이터 확인용</div>
+<hr>
+<div th:text="${dto}">sampleDTO로 넘어온 데이터 확인용</div>
+
+<script th:inline="javascript"> //타임리프에 자바스크립트 삽입
+  const list = [[${list}]]
+  const map = [[${map}]]
+  const dto = [[${dto}]]
+
+  console.log(list)
+  console.log(map)
+  console.log(dto)
+
+</script>
+</body>
+</html>
