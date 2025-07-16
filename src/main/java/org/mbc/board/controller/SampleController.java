@@ -72,6 +72,12 @@ public class SampleController {
         model.addAttribute("list",list);
         model.addAttribute("map",map);
         model.addAttribute("dto", sampleDTO);
+    }
 
+    @GetMapping("/ex/ex3")
+    public void ex3(Model model){
+        log.info("SampleController.ex3 메서드 실행");
+
+        model.addAttribute("arr", new String[]{"김기원, 김기원, 김기원"});
     }
 }

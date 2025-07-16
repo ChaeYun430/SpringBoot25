@@ -27,11 +27,14 @@ dependencies {
     //메이븐 리포지토리에서 코드를 가져와 코끼리를 누르면 가져온다.
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  //데이터베이스 관련
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //프론트 관련
+    // https://mvnrepository.com/artifact/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0' //프론트 레이아웃 관련
+    
     implementation 'org.springframework.boot:spring-boot-starter-web'       //spring-web
     annotationProcessor 'org.projectlombok:lombok'                          //lombok
     compileOnly 'org.projectlombok:lombok'                                  //lombok
-    testCompileOnly 'org.projectlombok:lombok'
-    testAnnotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'                              //lombok
+    testAnnotationProcessor 'org.projectlombok:lombok'                      //lombok
     
     // 1,2단계 src/main/resources/application.properties 에서 설정
     developmentOnly 'org.springframework.boot:spring-boot-devtools'         //부트 개발용
